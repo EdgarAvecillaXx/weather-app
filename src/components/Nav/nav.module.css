@@ -1,0 +1,36 @@
+@media only screen and (max-width: 800px) {
+.nav{
+  flex-direction: column;
+  row-gap: 1rem;
+}
+}
+
+.navMenu{
+  display: flex;
+  flex-direction: row;
+}
+
+.nav{
+  display: flex;
+  background-color: #141c25;
+  justify-content: space-between;
+}
+
+
+.menuTab, .menuTab:hover{
+ color: azure;
+ padding: 10px;
+ text-decoration: none;
+}
+
+img{
+  width: 40px;
+  height: 40px;
+  margin-right: 2rem;
+  align-self: center;
+}
+
+span{
+  font-size: x-large;
+}
+

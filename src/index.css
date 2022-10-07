@@ -1,0 +1,29 @@
+body{
+  background-color: #1e2b3a;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: overlay;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar-track
+{
+	display: none;
+}
+
+::-webkit-scrollbar
+{
+	width: 8px;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: whitesmoke;
+	border-radius: 10px;
+}
+
+*, *::before, *::after{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box; }

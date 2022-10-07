@@ -1,0 +1,106 @@
+@media only screen and (max-width: 800px) {
+  .button{
+    margin-top: 1rem;
+  }
+  .search{
+    width: 100%;
+    display: flex;
+  }
+}
+
+.search{
+    width: fit-content;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-bottom: 3px;
+}
+
+.input, .inputError{
+    margin-right: 2rem;
+    margin-left: .5rem;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 1px azure solid;
+    color: azure;
+    width: 250px;
+}
+
+.inputError{
+    border-color: crimson;
+    animation: tumbling .5s normal;
+}
+
+@keyframes tumbling {
+  0%, 20%, 40%, 60%, 80%  {
+    transform: rotateZ(1deg);
+  }
+  5%, 25%, 45%, 65%, 85%{
+    transform: rotateZ(-1deg);
+  }
+}
+.inputError::placeholder{
+  color: crimson;
+  opacity: .7;
+}
+
+.icon{
+    color: red;
+}
+
+
+.button{
+    background-color: transparent;
+    border: 1px solid green;
+    color: green;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    animation: wiggle 3s linear infinite; 
+    transform-origin: 50% 5em;
+}
+
+@keyframes wiggle {
+    0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }    
+}
+
+.button:active{
+    transform: scale(.95);
+    color: azure;
+    border-color: azure;
+    background-color: green;
+}
+
+.button:hover{
+    animation: none;
+    color: azure;
+    border-color: azure;
+    background-color: green;
+    transition: all .5s ease-out;
+}
+
+.button:focus{
+    outline: none;
+}

@@ -1,0 +1,15 @@
+.container{
+  margin-top: 10px;
+  height: fit-content;
+  padding: 50px;
+  background-color: black;
+  color: aliceblue;
+  width: 50%;
+  font-size: larger;
+  border-radius: 20px;
+  word-wrap: normal;
+}
+
+.info{
+  text-align: justify;
+}

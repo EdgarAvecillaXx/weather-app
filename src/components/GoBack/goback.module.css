@@ -1,0 +1,56 @@
+.button{
+    background-color: transparent;
+    border: 1px solid crimson;
+    color: crimson;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    animation: wiggle 3s linear infinite; 
+    transform-origin: 50% 5em;
+    width: 80px;
+    height: 38px;
+    margin: auto 10px auto 0;
+}
+
+@keyframes wiggle {
+    0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }    
+}
+
+.button:active{
+    transform: scale(.95);
+    color: azure;
+    border-color: azure;
+    background-color: crimson;
+}
+
+.button:hover{
+    animation: none;
+    color: azure;
+    border-color: azure;
+    background-color: crimson;
+    transition: all .5s ease-out;
+}
+
+.button:focus{
+    outline: none;
+}

@@ -1,0 +1,62 @@
+.container{
+    padding: 1rem;
+    margin: 0 auto;
+    width: 350px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 35px 20% 20% 20% 20%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    height: 200px;
+    background: linear-gradient(to left top, #e66465, #9198e5);
+    color: azure;
+    box-shadow: #9198e5 0px 0px 25px;
+}
+
+.cancel{
+    justify-self: end;
+    height: 35px;
+    width: 35px;
+    grid-column: 5 / 6;
+    grid-row: 1 / 2;
+    border: none;
+    background-color: crimson;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.title, .title:hover{
+    color: whitesmoke;
+    grid-row: 2 / 3;
+    grid-column: 1 / 6;
+    text-align: center;
+    font-size: x-large;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.title:hover{
+    color: honeydew;
+    transform: scale(1.05);
+}
+
+.containerCard{
+    justify-content: space-around;
+    display: flex;
+    grid-row: 3 / 6;
+    grid-column: 1 / 5;
+    width: 100%;
+    margin: 0 auto;
+    font-size: large;
+    margin-top: .5rem;
+}
+
+.icon{
+    grid-row: 3/ 5;
+    grid-column: 4 / 6 ;
+    justify-self: end;
+    margin-top: .5rem;
+    width: 80px;
+    height: 80px;
+}
