@@ -4,7 +4,6 @@ import { cardsContainer, alert } from "./cards.module.css";
 
 export default function Cards({ cities, onClose }) {
   //this render cards or show a no city line
-  console.log("Cards, cities", cities);
   const renderCards = (() => {
     if (cities.length) {
       return cities.map(city => (
@@ -22,5 +21,5 @@ export default function Cards({ cities, onClose }) {
   })();
 
   //Component render
-  return <div className={cardsContainer}>{renderCards}</div>;
+  return <div className={cardsContainer}> {renderCards}</div>;
 }

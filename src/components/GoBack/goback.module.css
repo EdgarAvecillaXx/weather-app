@@ -54,3 +54,35 @@
 .button:focus{
     outline: none;
 }
+
+
+  @media only screen and (max-width: 800px) {
+    .button{
+      width: 200px;
+      margin-right: 2rem
+    }
+
+   @keyframes wiggle {
+    0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-7deg);
+  }
+  20% {
+    transform: rotateZ(5deg);
+  }
+  25% {
+    transform: rotateZ(-5deg);
+  }
+  30% {
+    transform: rotateZ(3deg);
+  }
+  35% {
+    transform: rotateZ(-2deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }    
+} 
+  }

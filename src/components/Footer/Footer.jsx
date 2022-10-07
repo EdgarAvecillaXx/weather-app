@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { tabSelected, tab } from "./footer.module.css";
+import { tabSelected, tab, about } from "./footer.module.css";
 
 function Footer() {
   const path = useLocation().pathname;
@@ -11,7 +11,7 @@ function Footer() {
         <NavLink
           to="/about"
           className={({ isActive }) => (isActive ? tabSelected : tab)}>
-          <span>About</span>
+          <span className={about}>About</span>
         </NavLink>
       )}
     </>

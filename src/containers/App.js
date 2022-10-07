@@ -37,6 +37,7 @@ function App() {
             const url = `https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=${apiKey}&units=metric`;
             const response = await fetch(url);
             const data = await response.json();
+            console.log(data);
             if (data.cod === 200) {
               const ciudad = {
                 min: Math.round(data.main.temp_min),
@@ -59,9 +60,10 @@ function App() {
           });
           setPos(false);
         } else {
-          const url = `http://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${apiKey}&units=metric`;
+          const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${apiKey}&units=metric`;
           const response = await fetch(url);
           const data = await response.json();
+          console.log(data);
           if (data.cod === 200) {
             const ciudad = {
               min: Math.round(data.main.temp_min),
@@ -105,13 +107,17 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Cards cities={cities} onClose={handleClose} />}></Route>
+            element={
+              <Cards cities={cities} onClose={handleClose} loading={request} />
+            }></Route>
           <Route path="/about" element={<About />} />
           <Route
             path="/ciudad/:ciudadId"
-            element={<Ciudad cities={cities} />}
+            element={
+              !cities.length ? <PageNotFound /> : <Ciudad cities={cities} />
+            }
           />
-          <Route path="*" element={<PageNotFound />} />
+          <Route path="/*" element={<PageNotFound />} />
         </Routes>
       </div>
       <Footer />

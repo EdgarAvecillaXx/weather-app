@@ -22,3 +22,12 @@
   text-decoration: underline;
 }
 
+.about{
+  font-size: xx-large;
+}
+
+  @media only screen and (max-width: 800px) {
+    .tabSelected, .tab{
+      display: none;
+    }
+  }

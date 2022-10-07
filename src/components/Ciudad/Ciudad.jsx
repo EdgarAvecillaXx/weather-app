@@ -5,8 +5,8 @@ import { container, title, infoContainer, info } from "./Ciudad.module.css";
 
 function Ciudad({ cities }) {
   const { ciudadId } = useParams();
-  console.log(ciudadId);
   const city = cities.filter(city => city.id === parseInt(ciudadId));
+  setTimeout(() => {});
   return (
     <>
       {city.length ? (

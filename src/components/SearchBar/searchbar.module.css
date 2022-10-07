@@ -1,21 +1,12 @@
-@media only screen and (max-width: 800px) {
-  .button{
-    margin-top: 1rem;
-  }
-  .search{
-    width: 100%;
-    display: flex;
-  }
-}
 
 .search{
-    width: fit-content;
-    margin-bottom: 10px;
-    padding: 10px;
+  width: fit-content;
+  margin-bottom: 10px;
+  padding: 10px;
     padding-bottom: 3px;
-}
-
-.input, .inputError{
+  }
+  
+  .input, .inputError{
     margin-right: 2rem;
     margin-left: .5rem;
     padding: 5px;
@@ -26,16 +17,16 @@
     border-bottom: 1px azure solid;
     color: azure;
     width: 250px;
-}
+  }
 
-.inputError{
+  .inputError{
     border-color: crimson;
     animation: tumbling .5s normal;
-}
-
-@keyframes tumbling {
-  0%, 20%, 40%, 60%, 80%  {
-    transform: rotateZ(1deg);
+  }
+  
+  @keyframes tumbling {
+    0%, 20%, 40%, 60%, 80%  {
+      transform: rotateZ(1deg);
   }
   5%, 25%, 45%, 65%, 85%{
     transform: rotateZ(-1deg);
@@ -47,23 +38,23 @@
 }
 
 .icon{
-    color: red;
+  color: red;
 }
 
 
 .button{
-    background-color: transparent;
-    border: 1px solid green;
-    color: green;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 16px;
-    animation: wiggle 3s linear infinite; 
-    transform-origin: 50% 5em;
+  background-color: transparent;
+  border: 1px solid green;
+  color: green;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  animation: wiggle 3s linear infinite; 
+  transform-origin: 50% 5em;
 }
 
 @keyframes wiggle {
-    0%, 7% {
+  0%, 7% {
     transform: rotateZ(0);
   }
   15% {
@@ -91,16 +82,53 @@
     color: azure;
     border-color: azure;
     background-color: green;
-}
+  }
 
-.button:hover{
+  .button:hover{
     animation: none;
     color: azure;
     border-color: azure;
     background-color: green;
     transition: all .5s ease-out;
+  }
+
+  .button:focus{
+    outline: none;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .input, .inputError{
+      margin-left: .5rem;
+      margin-right: 0;
+    }
+
+    .button{
+      margin-top: 1rem;
+      width: 150px;
+    }
+
+    @keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-7deg);
+  }
+  20% {
+    transform: rotateZ(5deg);
+  }
+  25% {
+    transform: rotateZ(-5deg);
+  }
+  30% {
+    transform: rotateZ(3deg);
+  }
+  35% {
+    transform: rotateZ(-2deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }    
 }
 
-.button:focus{
-    outline: none;
-}
+  }
